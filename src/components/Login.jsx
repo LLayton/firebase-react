@@ -5,8 +5,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import "../assets/login.css";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("emericlambert08@gmail.com");
+  const [password, setPassword] = useState("testastos");
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
   useEffect(() => {
@@ -16,6 +16,9 @@ function Login() {
     }
     if (user) navigate("/dashboard");
   }, [user, loading]);
+  const vibro=()=>{
+
+  }
   return (
     <div className="login">
       <div className="login__container">
