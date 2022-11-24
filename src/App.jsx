@@ -2,7 +2,7 @@ import './assets/login.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
-
+import AddStudent from './components/Student'
 function App() {
   
 
@@ -10,7 +10,7 @@ function App() {
     <div className="app">
       <Router>
         <Routes>
-          <Route exact path="/" element={ <Login/> } />
+          <Route exact path="/" element={ <AddStudent/> } />
           <Route exact path="/Dashboard" element={ <Dashboard/> } />
 
         </Routes>

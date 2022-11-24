@@ -24,19 +24,38 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBzU0xvdroKn4OL2zegV354Mw9DaSTpA08",
-  authDomain: "fir-react-3fd42.firebaseapp.com",
-  projectId: "fir-react-3fd42",
-  storageBucket: "fir-react-3fd42.appspot.com",
-  messagingSenderId: "485703172519",
-  appId: "1:485703172519:web:8bd5d75cfd74f30ef03682"
+  apiKey: "AIzaSyAQu518kBbcKigDcBskB24FXvmGMMmiZck",
+  authDomain: "react-firebase-auth-97a5c.firebaseapp.com",
+  projectId: "react-firebase-auth-97a5c",
+  storageBucket: "react-firebase-auth-97a5c.appspot.com",
+  messagingSenderId: "417567379584",
+  appId: "1:417567379584:web:a713165a90ab5f1c321665"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
+
+
 const db = getFirestore(app);
 const googleProvider = new GoogleAuthProvider();
+
+const AddStudent=()=>{
+  const data={
+    name:"jonhy"
+  }
+    var collection = firebase.firestore().collection('restaurants');
+    return collection.add(data);
+  
+}
+
+
+
+
+
+
+
 
 const signInWithGoogle = async () => {
   try {
